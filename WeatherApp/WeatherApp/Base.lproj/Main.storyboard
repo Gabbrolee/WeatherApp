@@ -1,0 +1,313 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="WeatherApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="a79-5s-42u">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="487"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="forest_sunny" translatesAutoresizingMaskIntoConstraints="NO" id="rD8-Bo-yNf">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="397"/>
+                                    </imageView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="138" translatesAutoresizingMaskIntoConstraints="NO" id="UCk-Fm-zzP">
+                                        <rect key="frame" x="15" y="427" width="390.5" height="54.5"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="17" translatesAutoresizingMaskIntoConstraints="NO" id="Qju-kh-koN">
+                                                <rect key="frame" x="0.0" y="0.0" width="28" height="54.5"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="20°" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Z3-Dh-ZtF">
+                                                        <rect key="frame" x="0.0" y="0.0" width="28" height="20.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="min" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Wq-1R-era">
+                                                        <rect key="frame" x="0.0" y="37.5" width="28" height="17"/>
+                                                        <fontDescription key="fontDescription" name="DamascusLight" family="Damascus" pointSize="17"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="9" translatesAutoresizingMaskIntoConstraints="NO" id="F7s-BI-XlC">
+                                                <rect key="frame" x="166" y="0.0" width="54" height="54.5"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="20°" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dmY-im-0cz">
+                                                        <rect key="frame" x="13" y="0.0" width="28" height="28.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="current" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tXm-QQ-g72">
+                                                        <rect key="frame" x="0.0" y="37.5" width="54" height="17"/>
+                                                        <fontDescription key="fontDescription" name="DamascusLight" family="Damascus" pointSize="17"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="lpC-7X-sUl">
+                                                <rect key="frame" x="358" y="0.0" width="32.5" height="54.5"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="20°" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dxz-fq-UkN">
+                                                        <rect key="frame" x="0.0" y="0.0" width="32.5" height="21.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="max" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lgb-cw-btD">
+                                                        <rect key="frame" x="0.0" y="37.5" width="32.5" height="17"/>
+                                                        <fontDescription key="fontDescription" name="DamascusLight" family="Damascus" pointSize="17"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Tud-vq-QJf">
+                                        <rect key="frame" x="142" y="124" width="130.5" height="116"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="20°" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ujp-xj-Kbt">
+                                                <rect key="frame" x="27" y="0.0" width="76" height="72"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="72" id="xlS-I1-FaJ"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="Damascus" family="Damascus" pointSize="50"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SUNNY" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xJA-3B-pWO">
+                                                <rect key="frame" x="0.0" y="72" width="130.5" height="44"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="44" id="dsf-eu-ATK"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="40"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.27786570789999998" green="0.66874724630000004" blue="0.1851850152" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="Tud-vq-QJf" firstAttribute="centerX" secondItem="a79-5s-42u" secondAttribute="centerX" id="5wV-Np-bfI"/>
+                                    <constraint firstAttribute="trailing" secondItem="UCk-Fm-zzP" secondAttribute="trailing" constant="8.5" id="8RZ-QS-8Ho"/>
+                                    <constraint firstAttribute="bottom" secondItem="rD8-Bo-yNf" secondAttribute="bottom" constant="90" id="Nrg-RY-oki"/>
+                                    <constraint firstAttribute="trailing" secondItem="rD8-Bo-yNf" secondAttribute="trailing" id="Xh6-yO-2dI"/>
+                                    <constraint firstItem="UCk-Fm-zzP" firstAttribute="leading" secondItem="a79-5s-42u" secondAttribute="leading" constant="15" id="aXf-5E-p7T"/>
+                                    <constraint firstItem="Tud-vq-QJf" firstAttribute="centerY" secondItem="a79-5s-42u" secondAttribute="centerY" constant="-61.5" id="bt8-i4-AqB"/>
+                                    <constraint firstItem="rD8-Bo-yNf" firstAttribute="top" secondItem="a79-5s-42u" secondAttribute="top" id="eSh-gQ-FKS"/>
+                                    <constraint firstItem="rD8-Bo-yNf" firstAttribute="leading" secondItem="a79-5s-42u" secondAttribute="leading" id="hCD-3c-D7f"/>
+                                    <constraint firstItem="UCk-Fm-zzP" firstAttribute="top" secondItem="rD8-Bo-yNf" secondAttribute="bottom" constant="30" id="s9R-vm-GOR"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3h9-xo-P6h">
+                                <rect key="frame" x="0.0" y="487" width="414" height="2"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="2" id="PtR-zj-OXI"/>
+                                </constraints>
+                            </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="pNc-qf-Klz">
+                                <rect key="frame" x="178.5" y="529" width="57" height="264"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="1" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="clear" translatesAutoresizingMaskIntoConstraints="NO" id="Tdz-r3-bLi">
+                                        <rect key="frame" x="0.0" y="0.0" width="57" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="57" id="Liy-j0-JZG"/>
+                                            <constraint firstAttribute="height" constant="40" id="zHS-95-Qix"/>
+                                        </constraints>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="1" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="clear" translatesAutoresizingMaskIntoConstraints="NO" id="iXL-Cs-lr7">
+                                        <rect key="frame" x="0.0" y="56" width="57" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="57" id="bEI-8K-PbN"/>
+                                            <constraint firstAttribute="height" constant="40" id="h5b-DB-gAm"/>
+                                        </constraints>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="1" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="clear" translatesAutoresizingMaskIntoConstraints="NO" id="VkD-F0-XQe">
+                                        <rect key="frame" x="0.0" y="112" width="57" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="57" id="0xX-X7-aqe"/>
+                                            <constraint firstAttribute="height" constant="40" id="HDD-ew-hYE"/>
+                                        </constraints>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="1" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="clear" translatesAutoresizingMaskIntoConstraints="NO" id="bY0-I9-npL">
+                                        <rect key="frame" x="0.0" y="168" width="57" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="VsT-2x-KL7"/>
+                                            <constraint firstAttribute="width" constant="57" id="sNF-7t-G0F"/>
+                                        </constraints>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="1" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="clear" translatesAutoresizingMaskIntoConstraints="NO" id="Eoc-j9-9Nw">
+                                        <rect key="frame" x="0.0" y="224" width="57" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="8ll-P9-dgE"/>
+                                            <constraint firstAttribute="width" constant="57" id="lfq-Y8-l1g"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dEL-SP-RmP">
+                                <rect key="frame" x="352" y="535" width="0.0" height="0.0"/>
+                                <fontDescription key="fontDescription" name="Damascus" family="Damascus" pointSize="0.0"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="28" translatesAutoresizingMaskIntoConstraints="NO" id="zOI-LG-KU9">
+                                <rect key="frame" x="360.5" y="532" width="33.5" height="262"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="20°" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qiS-Pw-Blm">
+                                        <rect key="frame" x="0.0" y="0.0" width="33.5" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="y9H-qO-MAI"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Damascus" family="Damascus" pointSize="22"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="23°" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kbZ-mR-Ifu">
+                                        <rect key="frame" x="0.0" y="58" width="33.5" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="F43-Gr-Jby"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Damascus" family="Damascus" pointSize="22"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="27°" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GK3-Nb-aNf">
+                                        <rect key="frame" x="0.0" y="116" width="33.5" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="CMY-ZF-AUw"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Damascus" family="Damascus" pointSize="22"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="28°" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cCp-3V-4GO">
+                                        <rect key="frame" x="0.0" y="174" width="33.5" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="5z7-tQ-dE8"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Damascus" family="Damascus" pointSize="22"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="30°" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CDU-AJ-RDQ">
+                                        <rect key="frame" x="0.0" y="232" width="33.5" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="DmP-5L-4e5"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Damascus" family="Damascus" pointSize="22"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="JJR-lI-0dM">
+                                <rect key="frame" x="15" y="532" width="114" height="264"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tuesday" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c2z-7V-FHS">
+                                        <rect key="frame" x="0.0" y="0.0" width="114" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="114" id="636-Hf-puR"/>
+                                            <constraint firstAttribute="height" constant="40" id="9Je-V8-1WT"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Damascus" family="Damascus" pointSize="20"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wednesday" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pbH-RM-3YH">
+                                        <rect key="frame" x="0.0" y="56" width="114" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="Oix-zT-sI1"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="114" id="xir-Ai-1Tp"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Damascus" family="Damascus" pointSize="20"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Thursday" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0oW-nI-aa9">
+                                        <rect key="frame" x="0.0" y="112" width="114" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="114" id="KMz-dW-6JX"/>
+                                            <constraint firstAttribute="height" constant="40" id="Qxb-z6-rYJ"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Damascus" family="Damascus" pointSize="20"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Friday" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7ZR-Sf-Nqe">
+                                        <rect key="frame" x="0.0" y="168" width="114" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="89R-7B-ouy"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="114" id="h9d-h4-5tl"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Damascus" family="Damascus" pointSize="20"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Saturday" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vOr-ZR-kKh">
+                                        <rect key="frame" x="0.0" y="224" width="114" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="114" id="Jyc-nh-4My"/>
+                                            <constraint firstAttribute="height" constant="40" id="v6U-e6-Hy8"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Damascus" family="Damascus" pointSize="20"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" red="0.27786570789999998" green="0.66874724630000004" blue="0.1851850152" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="3h9-xo-P6h" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="743-JF-bO7"/>
+                            <constraint firstItem="a79-5s-42u" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="797-8k-TJp"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="a79-5s-42u" secondAttribute="bottom" constant="375" id="CCI-Tj-Y0Z"/>
+                            <constraint firstItem="pNc-qf-Klz" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="QXm-2K-6V7"/>
+                            <constraint firstItem="3h9-xo-P6h" firstAttribute="top" secondItem="a79-5s-42u" secondAttribute="bottom" id="W60-5f-gwv"/>
+                            <constraint firstItem="pNc-qf-Klz" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Yx7-YD-w33"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="zOI-LG-KU9" secondAttribute="trailing" constant="20" id="Zul-qn-EB7"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="pNc-qf-Klz" secondAttribute="bottom" constant="69" id="aaZ-bZ-BlF"/>
+                            <constraint firstItem="JJR-lI-0dM" firstAttribute="top" secondItem="zOI-LG-KU9" secondAttribute="top" id="cE5-9I-6fU"/>
+                            <constraint firstItem="3h9-xo-P6h" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="ci2-Mb-pTy"/>
+                            <constraint firstItem="dEL-SP-RmP" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" symbolic="YES" id="eL9-um-YAV"/>
+                            <constraint firstAttribute="trailing" secondItem="a79-5s-42u" secondAttribute="trailing" id="fiW-pg-Dwa"/>
+                            <constraint firstItem="pNc-qf-Klz" firstAttribute="top" secondItem="3h9-xo-P6h" secondAttribute="bottom" constant="40" id="hrt-Sa-kXD"/>
+                            <constraint firstItem="zOI-LG-KU9" firstAttribute="top" secondItem="3h9-xo-P6h" secondAttribute="bottom" constant="43" id="iuA-kh-oCE"/>
+                            <constraint firstItem="JJR-lI-0dM" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="15" id="lQO-ot-onG"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="dEL-SP-RmP" secondAttribute="trailing" constant="42" id="ne6-cC-dcm"/>
+                            <constraint firstItem="a79-5s-42u" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="p7g-zT-Dz6"/>
+                            <constraint firstAttribute="bottom" secondItem="dEL-SP-RmP" secondAttribute="bottom" constant="361" id="qMU-WR-dbb"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="319" y="-269"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="clear" width="13" height="13"/>
+        <image name="forest_sunny" width="360" height="321"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
