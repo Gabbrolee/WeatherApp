@@ -67,7 +67,10 @@ func getPresentWeather(){
     model2 = data
     
     TuesdayOutlet.text = String(describing: Int(model2?.list[0].main.temp ?? 0.0))
-    
+    WednesdayOutlet.text = String(describing: Int(model2?.list[1].main.temp ?? 0.0))
+    ThursdayOutlet.text = String(describing: Int(model2?.list[2].main.temp ?? 0.0))
+    FridayOutlet.text = String(describing: Int(model2?.list[3].main.temp ?? 0.0))
+    SaturdayOutlet.text = String(describing: Int(model2?.list[4].main.temp ?? 0.0))
   }
   
 }
