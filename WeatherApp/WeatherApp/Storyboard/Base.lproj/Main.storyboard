@@ -313,6 +313,9 @@
                         <outlet property="displayMaximumTemperature" destination="dxz-fq-UkN" id="LXj-ue-RhZ"/>
                         <outlet property="displayMinTemperature" destination="9Z3-Dh-ZtF" id="rJm-oD-jIF"/>
                         <outlet property="displayTemperature" destination="Ujp-xj-Kbt" id="5nC-ea-AVb"/>
+                        <outlet property="imageView" destination="rD8-Bo-yNf" id="FbG-cJ-LxV"/>
+                        <outlet property="mainView" destination="8bC-Xf-vdC" id="YA1-nf-ZkW"/>
+                        <outlet property="topView" destination="a79-5s-42u" id="TWW-eO-6Sm"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

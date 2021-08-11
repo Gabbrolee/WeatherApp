@@ -8,6 +8,9 @@
 import UIKit
 
 class ViewController: UIViewController {
+  @IBOutlet var mainView: UIView!
+  @IBOutlet weak var topView: UIView!
+  @IBOutlet weak var imageView: UIImageView!
   
   @IBOutlet var displayTemperature: UILabel!
   @IBOutlet var displayMinTemperature: UILabel!
@@ -32,6 +35,7 @@ class ViewController: UIViewController {
   var displayMinTemp: Int = 0
   var displayCurrentTemp: Int = 0
   var displayMaxTemp: Int = 0
+  var weatherTypeDisplay: String = ""
   
   var loader = LoadCurrentData()
   var model: WeatherInfo?
@@ -53,13 +57,32 @@ func getPresentWeather(){
     displayMinTemp = Int((model?.main.temp_min)!)
     displayMaxTemp =   Int((model?.main.temp_max)!)
     displayCurrentTemp =  Int((model?.main.temp)!)
+    weatherTypeDisplay = model?.weather[0].main ?? ""
     
     displayTemperature.text = "\(displayTemp - 273)°"
     displayMinTemperature.text = "\(displayMinTemp - 273)°"
     displayMaximumTemperature.text = "\(displayMaxTemp - 273)°"
     displayCurrentTemperature.text = "\(displayTemp - 273)°"
+    SunnyOutlet.text = weatherTypeDisplay.uppercased()
     
-    
+    switch SunnyOutlet.text {
+    case "SUNNY":
+      imageView.image = UIImage(named: "forest_sunny")
+      topView.backgroundColor = UIColor(red: 0.28, green: 0.67, blue: 0.18, alpha: 1)
+      mainView.backgroundColor = UIColor(red: 0.28, green: 0.67, blue: 0.18, alpha: 1)
+    case "RAIN":
+      imageView.image = UIImage(named: "forest_rainy")
+      topView.backgroundColor = UIColor(red: 0.34, green: 0.34, blue: 0.36, alpha: 1)
+      mainView.backgroundColor = UIColor(red: 0.34, green: 0.34, blue: 0.36, alpha: 1)
+    case "CLOUDS":
+      imageView.image = UIImage(named: "forest_cloudy")
+      topView.backgroundColor = UIColor(red: 0.33, green: 0.44, blue: 0.48, alpha: 1)
+      mainView.backgroundColor = UIColor(red: 0.33, green: 0.44, blue: 0.48, alpha: 1)
+    default:
+      imageView.image = UIImage(named: "forest_sunny")
+      topView.backgroundColor = UIColor(red: 0.28, green: 0.67, blue: 0.18, alpha: 1)
+      mainView.backgroundColor = UIColor(red: 0.28, green: 0.67, blue: 0.18, alpha: 1)
+    }
     
   })
   
@@ -71,6 +94,9 @@ func getPresentWeather(){
     ThursdayOutlet.text = String(describing: Int(model2?.list[2].main.temp ?? 0.0))
     FridayOutlet.text = String(describing: Int(model2?.list[3].main.temp ?? 0.0))
     SaturdayOutlet.text = String(describing: Int(model2?.list[4].main.temp ?? 0.0))
+    
+    
+    
   }
   
 }

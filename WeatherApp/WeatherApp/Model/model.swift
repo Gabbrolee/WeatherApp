@@ -6,12 +6,14 @@
 //
 
 import UIKit
-struct WeatherInfo:Codable{
+struct WeatherInfo: Decodable{
   let main: PresentWeather
-  
+  let weather: [WeatherDets]
 }
-
-struct PresentWeather: Codable{
+struct WeatherDets: Decodable {
+  let main: String
+}
+struct PresentWeather: Decodable{
   var temp: Float
   var temp_min: Float
   var temp_max: Float
