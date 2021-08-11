@@ -297,6 +297,23 @@
                             <constraint firstAttribute="bottom" secondItem="dEL-SP-RmP" secondAttribute="bottom" constant="361" id="qMU-WR-dbb"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="FridayCurrentOutlet" destination="bY0-I9-npL" id="hTo-qD-99O"/>
+                        <outlet property="FridayOutlet" destination="cCp-3V-4GO" id="znZ-xe-ROP"/>
+                        <outlet property="SaturdayCurrentOutlet" destination="Eoc-j9-9Nw" id="kTE-tV-6i1"/>
+                        <outlet property="SaturdayOutlet" destination="CDU-AJ-RDQ" id="lax-nD-Dih"/>
+                        <outlet property="SunnyOutlet" destination="xJA-3B-pWO" id="eXa-Ox-H1b"/>
+                        <outlet property="ThursdayCurrentOutlet" destination="VkD-F0-XQe" id="5A2-j7-Vr0"/>
+                        <outlet property="ThursdayOutlet" destination="GK3-Nb-aNf" id="aOL-XA-Ivq"/>
+                        <outlet property="TuesdayCurrentOutlet" destination="Tdz-r3-bLi" id="cTW-AF-7aR"/>
+                        <outlet property="TuesdayOutlet" destination="qiS-Pw-Blm" id="kPD-Gb-515"/>
+                        <outlet property="WednesdayCurrentOutlet" destination="VkD-F0-XQe" id="E8D-Qd-rtX"/>
+                        <outlet property="WednesdayOutlet" destination="kbZ-mR-Ifu" id="Nnj-Su-x3E"/>
+                        <outlet property="displayCurrentTemperature" destination="dmY-im-0cz" id="ASp-t7-0kj"/>
+                        <outlet property="displayMaximumTemperature" destination="dxz-fq-UkN" id="LXj-ue-RhZ"/>
+                        <outlet property="displayMinTemperature" destination="9Z3-Dh-ZtF" id="rJm-oD-jIF"/>
+                        <outlet property="displayTemperature" destination="Ujp-xj-Kbt" id="5nC-ea-AVb"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

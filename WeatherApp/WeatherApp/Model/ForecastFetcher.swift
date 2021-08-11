@@ -13,6 +13,7 @@ class LoadCurrentData {
     let urlString = "https://api.openweathermap.org/data/2.5/weather?q=\(city)&cnt=5&appid=\(apiKey)"
     if let url = URL(string: urlString) {
       URLSession.shared.dataTask(with: url) { data, response, error in
+        print(data)
         if let error = error {
           print("Eror: \(error.localizedDescription)")
         }
@@ -41,6 +42,8 @@ class LoadCurrentData {
         }
       }.resume()
     }
+    
+    
 
   }
 }
