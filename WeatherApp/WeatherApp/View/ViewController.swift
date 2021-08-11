@@ -35,6 +35,7 @@ class ViewController: UIViewController {
   
   var loader = LoadCurrentData()
   var model: WeatherInfo?
+  var model2: ForeCastResponse?
   override func viewDidLoad() {
     super.viewDidLoad()
     // Do any additional setup after loading the view.
@@ -44,7 +45,7 @@ class ViewController: UIViewController {
 
 
 func getPresentWeather(){
-  loader.fetchForecastData(city: "Benue", forcast: false, completionHandler: { [self] (data) in
+  loader.fetchCurrentData(city: "Lagos", forcast: false, completionHandler: { [self] (data) in
     model = data
     
     
@@ -62,15 +63,14 @@ func getPresentWeather(){
     
   })
   
-}
-  
-  func getForecastWeather(){
-    loader.fetchForecastData(city: "Benue", forcast: false, completionHandler: { [self] (data) in
-      model = data
-   
-//      TuesdayOutlet.text = "\()"
-      
-    })
+  loader.fetchForecastData(city: "Lagos", forcast: false) { [self] (data) in
+    model2 = data
+    
+    TuesdayOutlet.text = String(describing: Int(model2?.list[0].main.temp ?? 0.0))
     
   }
+  
+}
+  
+  
 }
