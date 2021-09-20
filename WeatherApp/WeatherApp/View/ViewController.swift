@@ -45,61 +45,59 @@ class ViewController: UIViewController {
     // Do any additional setup after loading the view.
     getPresentWeather()
   }
-
-
-
-func getPresentWeather(){
-  loader.fetchCurrentData(city: "Lagos", forcast: false, completionHandler: { [self] (data) in
-    model = data
+  
+  
+  
+  func getPresentWeather(){
+    loader.fetchCurrentData(city: "London", forcast: false, completionHandler: { [self] (data) in
+      model = data
+      
+      
+      displayTemp =  Int((model?.main.temp)!)
+      displayMinTemp = Int((model?.main.temp_min)!)
+      displayMaxTemp =   Int((model?.main.temp_max)!)
+      displayCurrentTemp =  Int((model?.main.temp)!)
+      weatherTypeDisplay = model?.weather[0].main ?? ""
+      
+      displayTemperature.text = "\(displayTemp - 273)°"
+      displayMinTemperature.text = "\(displayMinTemp - 273)°"
+      displayMaximumTemperature.text = "\(displayMaxTemp - 273)°"
+      displayCurrentTemperature.text = "\(displayTemp - 273)°"
+      SunnyOutlet.text = weatherTypeDisplay.uppercased()
+      
+      
+      switch SunnyOutlet.text {
+      case "SUNNY":
+        imageView.image = UIImage(named: "forest_sunny")
+        topView.backgroundColor = UIColor(red: 0.28, green: 0.67, blue: 0.18, alpha: 1)
+        mainView.backgroundColor = UIColor(red: 0.28, green: 0.67, blue: 0.18, alpha: 1)
+      case "RAIN":
+        imageView.image = UIImage(named: "forest_rainy")
+        topView.backgroundColor = UIColor(red: 0.34, green: 0.34, blue: 0.36, alpha: 1)
+        mainView.backgroundColor = UIColor(red: 0.34, green: 0.34, blue: 0.36, alpha: 1)
+      case "CLOUDS":
+        imageView.image = UIImage(named: "forest_cloudy")
+        topView.backgroundColor = UIColor(red: 0.33, green: 0.44, blue: 0.48, alpha: 1)
+        mainView.backgroundColor = UIColor(red: 0.33, green: 0.44, blue: 0.48, alpha: 1)
+      default:
+        imageView.image = UIImage(named: "forest_sunny")
+        topView.backgroundColor = UIColor(red: 0.28, green: 0.67, blue: 0.18, alpha: 1)
+        mainView.backgroundColor = UIColor(red: 0.28, green: 0.67, blue: 0.18, alpha: 1)
+      }
+      
+    })
     
-    
-    displayTemp =  Int((model?.main.temp)!)
-    displayMinTemp = Int((model?.main.temp_min)!)
-    displayMaxTemp =   Int((model?.main.temp_max)!)
-    displayCurrentTemp =  Int((model?.main.temp)!)
-    weatherTypeDisplay = model?.weather[0].main ?? ""
-    
-    displayTemperature.text = "\(displayTemp - 273)°"
-    displayMinTemperature.text = "\(displayMinTemp - 273)°"
-    displayMaximumTemperature.text = "\(displayMaxTemp - 273)°"
-    displayCurrentTemperature.text = "\(displayTemp - 273)°"
-    SunnyOutlet.text = weatherTypeDisplay.uppercased()
-    
-    switch SunnyOutlet.text {
-    case "SUNNY":
-      imageView.image = UIImage(named: "forest_sunny")
-      topView.backgroundColor = UIColor(red: 0.28, green: 0.67, blue: 0.18, alpha: 1)
-      mainView.backgroundColor = UIColor(red: 0.28, green: 0.67, blue: 0.18, alpha: 1)
-    case "RAIN":
-      imageView.image = UIImage(named: "forest_rainy")
-      topView.backgroundColor = UIColor(red: 0.34, green: 0.34, blue: 0.36, alpha: 1)
-      mainView.backgroundColor = UIColor(red: 0.34, green: 0.34, blue: 0.36, alpha: 1)
-    case "CLOUDS":
-      imageView.image = UIImage(named: "forest_cloudy")
-      topView.backgroundColor = UIColor(red: 0.33, green: 0.44, blue: 0.48, alpha: 1)
-      mainView.backgroundColor = UIColor(red: 0.33, green: 0.44, blue: 0.48, alpha: 1)
-    default:
-      imageView.image = UIImage(named: "forest_sunny")
-      topView.backgroundColor = UIColor(red: 0.28, green: 0.67, blue: 0.18, alpha: 1)
-      mainView.backgroundColor = UIColor(red: 0.28, green: 0.67, blue: 0.18, alpha: 1)
+    loader.fetchForecastData(city: "Lagos") { [self] (data) in
+      model2 = data
+      
+      TuesdayOutlet.text = String(describing: Int(model2?.list[0].main.temp ?? 0.0))
+      WednesdayOutlet.text = String(describing: Int(model2?.list[1].main.temp ?? 0.0))
+      ThursdayOutlet.text = String(describing: Int(model2?.list[2].main.temp ?? 0.0))
+      FridayOutlet.text = String(describing: Int(model2?.list[3].main.temp ?? 0.0))
+      SaturdayOutlet.text = String(describing: Int(model2?.list[4].main.temp ?? 0.0))
+      
     }
     
-  })
-  
-  loader.fetchForecastData(city: "Lagos", forcast: false) { [self] (data) in
-    model2 = data
-    
-    TuesdayOutlet.text = String(describing: Int(model2?.list[0].main.temp ?? 0.0))
-    WednesdayOutlet.text = String(describing: Int(model2?.list[1].main.temp ?? 0.0))
-    ThursdayOutlet.text = String(describing: Int(model2?.list[2].main.temp ?? 0.0))
-    FridayOutlet.text = String(describing: Int(model2?.list[3].main.temp ?? 0.0))
-    SaturdayOutlet.text = String(describing: Int(model2?.list[4].main.temp ?? 0.0))
-    
-    
-    
   }
-  
-}
-  
   
 }
